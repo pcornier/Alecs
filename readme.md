@@ -127,8 +127,8 @@ Called once a new compatible entity is added to the world.
 ```lua
 ballSystem = { filter = { 'ball', 'pos', 'size' } }
 function ballSystem:newEntity(ball)
- 	-- initialize some ball props here
- 	ball.size = math.random(15)
+  -- initialize some ball props here
+  ball.size = math.random(15)
 end
 ```
 
@@ -136,7 +136,7 @@ end
 The frame event, which is triggered by alecs:update(...). A good practice is to send the deltatime to systems.
 ```lua
 function ballSystem:update(dt)
-	 -- reorder balls for rendering based on vertical positions
+  -- reorder balls for rendering based on vertical positions
   table.sort(self.entities, function(a, b)
     return a.pos.y < b.pos.y
   end)
@@ -148,7 +148,7 @@ This event is called for each compatible entity in the system.
 ```lua
 function ballSystem:process(ball, dt)
   ball.pos.x = ball.pos.x + ball.norm.x * ball.speed
-	ball.pos.y = ball.pos.y + ball.norm.y * ball.speed
+  ball.pos.y = ball.pos.y + ball.norm.y * ball.speed
 end
 ```
 
@@ -158,7 +158,7 @@ The Alecs instance and the list of compatible entities are available from any sy
 ```lua
 function ballSystem:update()
   for _,e in pairs(self.entities) do
-	  if e.pos.x > 100 then self.alecs:removeEntity(e) end
+    if e.pos.x > 100 then self.alecs:removeEntity(e) end
   end
 end
 ```
