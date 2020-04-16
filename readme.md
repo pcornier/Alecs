@@ -1,6 +1,6 @@
 # ![Alecs Logo](./icon.png) ALECS
 
-**A**nother **L**ÖVE **ECS**. It provides a clear separation between logic and data, it reduces drastically the code complexity, it breaks dependencies between game objects, allows the serialization of the whole game state and makes dynamic composition possible.
+**A**nother **L**ÖVE **ECS**. It provides a clear separation between logic and data, it reduces code complexity, it breaks dependencies between game objects, allows the serialization of the whole game state and makes dynamic composition possible.
 
 ## Usage
 
