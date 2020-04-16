@@ -95,7 +95,7 @@ local systems = alecs:getSystems()
 ```
 
 ### alecs:register(event, callback)
-Register a new event with the associated callback function. ALECS provides a mini event/messaging system.
+ALECS provides a mini event/messaging system. This function registers a callback to a custom event.
 ```lua
 alecs:register('newBullet', function(x, y, vx, vy)
   alecs:addEntity({
