@@ -1,4 +1,6 @@
 # ![Alecs Logo](./icon.png) ALECS
+[![Build Status](https://travis-ci.org/pcornier/Alecs.svg?branch=master)](https://travis-ci.org/pcornier/Alecs)
+
 
 **A**nother **L**ÖVE **ECS**. It provides a clear separation between logic and data, it reduces code complexity, it breaks dependencies between game objects, allows the serialization of the whole game state and makes dynamic composition possible.
 
