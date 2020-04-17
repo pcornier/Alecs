@@ -1,0 +1,16 @@
+language: c
+
+env:
+  - LUA="lua5.3"
+  - LUA="luajit"
+
+branches:
+  only:
+    - master
+
+install:
+  - sudo apt-get install luajit
+  - sudo apt-get install luarocks
+  - sudo luarocks install busted
+
+script: "busted spec"
