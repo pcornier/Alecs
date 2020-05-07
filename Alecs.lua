@@ -6,6 +6,7 @@ local Alecs = function()
   local alecs = {}
   local reg = {}
   local stack = {}
+  local statuses = {}
   local index = 1
 
   local function match(filter, entity)
@@ -102,10 +103,13 @@ local Alecs = function()
   end
 
   function alecs:status(group, status)
-    for _, system in pairs(systems) do
-      if system.group == group then
-        system.enabled = status
+    if statuses[group] == nil or statuses[group] ~= status then
+      for _, system in pairs(systems) do
+        if system.group == group then
+          system.enabled = status
+        end
       end
+      statuses[group] = status
     end
   end
 
