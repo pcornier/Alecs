@@ -2,9 +2,9 @@
 [![Build Status](https://travis-ci.org/pcornier/Alecs.svg?branch=master)](https://travis-ci.org/pcornier/Alecs)
 
 
-**A**nother **L**ÖVE **ECS**. It provides a clear separation between logic and data, it reduces code complexity, it breaks dependencies between game objects, allows the serialization of the whole game state and makes dynamic composition possible.
+**A**nother **L**ÖVE **ECS**. It provides a clear separation between logic and data, it reduces code complexity, it breaks dependencies between game objects, allows the serialization of the whole game state and makes dynamic composition possible. It was initially made for LÖVE but as there's no dependencies, you can use it in all your Lua projects.
 
-## Usage
+## Usage with Löve
 
 ```lua
 Alecs = require 'Alecs'
@@ -43,7 +43,7 @@ alecs:status('logic', false)
 ```
 
 ### alecs:addEntity(entity)
-Add a new entity to the world. An ID will be automatically generated if no one provided.
+Add a new entity to the world. An ID will be automatically generated if no one is provided.
 ```lua
 alecs:addEntity({
   id = "mydog",
@@ -117,7 +117,7 @@ alecs:emit('newBullet', 10, 10, 1, 2)
 ## Events
 
 ### system:added()
-Only gets called once, when the system is added to the world.
+Called when the system is added to the world.
 ```lua
 function playerSystem:added()
   -- a good place for the system to initialize
@@ -125,7 +125,7 @@ end
 ```
 
 ### system:newEntity(entity)
-Called once a new compatible entity is added to the world.
+Called when a new compatible entity is added to the world.
 ```lua
 ballSystem = { filter = { 'ball', 'pos', 'size' } }
 function ballSystem:newEntity(ball)
