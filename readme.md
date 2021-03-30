@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/pcornier/Alecs.svg?branch=master)](https://travis-ci.org/pcornier/Alecs)
 
 
-**A**nother **L**ÖVE **ECS**. It provides a clear separation between logic and data, it reduces code complexity, it breaks dependencies between game objects, allows the serialization of the whole game state and makes dynamic composition possible. It was initially made for LÖVE but as there's no dependencies, you can use it in all your Lua projects.
+**A**nother **L**ÖVE **ECS**. It provides a clear separation between logic and data, it reduces code complexity, it breaks dependencies between game objects, allows the serialization of the whole game state and makes dynamic composition possible. It was initially made for LÖVE but as there are no dependencies, you can use it in all your Lua projects.
 
 ## Usage with Löve
 
