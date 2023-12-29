@@ -190,20 +190,20 @@ local State = {
 
 function State:switch(state)
   self.stack[self.index] = state
-  if state.enter then state:enter()
+  if state.enter then state:enter() end
 end
 
 function State:push(state)
   self.index = self.index + 1
   self.stack[self.index] = state
-  if state.enter then state:enter()
+  if state.enter then state:enter() end
 end
 
 function State:pop()
   local state = self.stack[self.index]
   self.stack[self.index] = nil
   self.index = self.index - 1
-  if state.exit then state:exit()
+  if state.exit then state:exit() end
 end
 
 function State:update(...)
